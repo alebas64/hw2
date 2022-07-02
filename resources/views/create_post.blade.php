@@ -13,6 +13,7 @@
     <script src="{{asset('js/search.js')}}" defer></script>
     <script src="{{asset('js/api_builder.js')}}" defer></script>
     <script src="{{asset('js/modalGenres.js')}}" defer></script>
+    <script src='{{asset('js/navbar.js')}}' defer></script>
     
     <script type="text/javascript">
         const ANIME_API = "{{ route('cercaAnime') }}";

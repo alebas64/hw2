@@ -160,13 +160,22 @@ function print_single(single){
 }
 
 function postpost(indirizzo){
-    fetch(indirizzo).then(onResponse).then(result => {
-        console.log(result);
+    fetch(indirizzo).then(onResponse).then(json => {
+        console.log(json);
+        /*
         test = result;
+        let data = result.data;
         //document.getElementById("content").appendChild("div").append
-        let i;
-        for(i=0;i<result.length;i++){
-            print_single(result[i]);
+        for(let i=0;i<data.length;i++){
+            print_single(data[i]);
+        }*/
+        if(json.result === "success"){
+            let results = json.data;
+            for(let i=0;i<results.length;i++){
+                print_single(results[i]);
+            }
+        }else{
+            print404();
         }
     /*
         if(result.length < 10){
@@ -186,17 +195,34 @@ function like_unlike(event){
 }
 */
 
-//non usata?
-function foxes(){
-    //let target = "[data-question-id='one'] [data-img-id='";
-    for(let i=0;i<1;i++)
-        fetch('https://randomfox.ca/floof/').then(onResponse).then(json => {
-            //console.log(json);
-            /*
-            document.querySelectorAll(target + i + "']")[0]
-                .src = json["image"];
-                */
-        });
+
+function print404(){
+    fetch(FOX_API).then(onResponse).then(result => {
+        let picciriddu = document.createElement("div");
+        picciriddu.setAttribute("class","fox");
+        //nome anime
+        picciriddu.appendChild(
+            document.createElement("div")
+        );
+        picciriddu.lastChild.setAttribute("class","nome");
+        picciriddu.lastChild.appendChild(
+            document.createElement("p")
+        );
+        //console.log(anime.titles);
+        picciriddu.lastChild.firstChild.textContent = "Non ho trovato nulla, tieni una volpe :D"
+
+        //immagine copertina
+        picciriddu.appendChild(
+            document.createElement("div")
+        );
+        picciriddu.lastChild.setAttribute("class","imageFOX");
+        picciriddu.lastChild.appendChild(
+            document.createElement("img")
+        );
+        picciriddu.lastChild.firstChild.setAttribute("src", result.image);
+        document.getElementById("content").appendChild(picciriddu);
+    });
+    
 }
 
 //fetch("api/get_fox.php").then(onResponse).then(result => console.log(result));

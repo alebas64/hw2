@@ -131,9 +131,29 @@ header p{
     justify-content: space-around;
 }
 
+#links_lines{
+    display: none;
+}
+
 @media(max-width:730px){
     #links{
+        display: none;
+    }
+    #links_lines{
+        position:absolute;
         display:none;
+        right:5px;
+        top:70px;
+    }
+    #links_lines div{
+        height:30px;
+    }
+    #links_lines a{
+        margin:0px;
+        padding:5px 10px;
+        border:none;
+        border-radius:0px;
+        background:lightblue;
     }
 }
 .navbar img{

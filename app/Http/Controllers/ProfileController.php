@@ -32,7 +32,6 @@ class ProfileController extends Controller
                       //->limit(20)
                       ->get();
         
-        
         $json = json_decode($res1);
         if (count($res1)>0){
             for($i=0;$i<count($res1);$i++){
@@ -42,7 +41,10 @@ class ProfileController extends Controller
                     $json[$i]->liked="si";
                 $json[$i]->user = User::select("username")->where("id","=",$json[$i]->user)->first()["username"];
             }
-            return response()->json($json);           
+            //return response()->json($json);
+            return response()->json(["result"=>"success","data"=>$json]);           
+        }else{
+            return response()->json(["result"=>"notFound","data"=>""]);
         }
     }
 

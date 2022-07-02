@@ -15,11 +15,13 @@
     <script src='{{asset('js/fetch_update.js')}}' defer></script>
     <script src='{{asset('js/fetchs.js')}}' defer></script>
     <script src='{{asset('js/profile.js')}}' defer></script>
+    <script src='{{asset('js/navbar.js')}}' defer></script>
     <script type="text/javascript">
         const PROFILE_ROUTE = "{{ route ('profile') }}";
         const HOME_ROUTE = "{{ route ('home') }}";
         const IMAGE_ROUTE = "{{asset ('img')}}";
         const TOKEN = "{{ csrf_token() }}";
+        const FOX_API = "{{ route('foxes')}}";
     </script>
 @endsection
 
@@ -36,7 +38,7 @@
         <div><a href="#"><?php //echo(getNome());?></a></div>-->
         <div><a href="{{route('home')}}">Homepage</a></div>
         <div id="links">
-            <div><a href="{{route('search_page')}}">Ricerca utente</a></div> <!-- ricerca utente -->
+            <div><a href="{{route('search_page')}}">Ricerca utente</a></div>
             <div><a href="{{route('cercaAnime')}}">Crea un post</a></div>
             <div><a href="{{route('logout')}}">Sloggati</a></div>
         </div>
@@ -44,6 +46,11 @@
             <div></div>
             <div></div>
             <div></div>
+        </div>
+        <div id="links_lines">
+            <div><a href="{{route('search_page')}}">Ricerca utente</a></div>
+            <div><a href="{{route('cercaAnime')}}">Crea un post</a></div>
+            <div><a href="{{route('logout')}}">Sloggati</a></div>
         </div>
     </nav>
     <div id="main">

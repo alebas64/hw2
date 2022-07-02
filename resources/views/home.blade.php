@@ -13,10 +13,12 @@
     <script src='{{asset('js/fetch_update.js')}}' defer></script>
     <script src='{{asset('js/fetchs.js')}}' defer></script>
     <script src='{{asset('js/home.js')}}' defer></script>
+    <script src='{{asset('js/navbar.js')}}' defer></script>
     <script type="text/javascript">
         const PROFILE_ROUTE = "{{ route ('profile') }}";
         const HOME_ROUTE = "{{ route ('home') }}";
         const IMAGE_ROUTE = "{{asset ('img')}}";
+        const FOX_API = "{{ route('foxes')}}";
     </script>
 @endsection
 <?php
@@ -29,7 +31,7 @@
     <nav class="navbar">
         <div><a href="{{route('profile')}}"><?php echo(getNome());?></a></div>
         <div id="links">
-            <div><a href="{{route('search_page')}}">Ricerca utente</a></div> <!-- ricerca utente -->
+            <div><a href="{{route('search_page')}}">Ricerca utente</a></div>
             <div><a href="{{route('cercaAnime')}}">Crea un post</a></div>
             <div><a href="{{route('logout')}}">Sloggati</a></div>
         </div>
@@ -38,7 +40,11 @@
             <div></div>
             <div></div>
         </div>
-
+        <div id="links_lines">
+            <div><a href="{{route('search_page')}}">Ricerca utente</a></div> 
+            <div><a href="{{route('cercaAnime')}}">Crea un post</a></div>
+            <div><a href="{{route('logout')}}">Sloggati</a></div>
+        </div>
     </nav>
 
     <div id="content" class="fix">

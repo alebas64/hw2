@@ -83,49 +83,6 @@ function print(user){
     document.getElementById("content").appendChild(picciriddu);
 
 }
-/*
-function reshow(event){
-    document.getElementsByName("main")[0].removeAttribute("id","hidden");
-    document.getElementsByName("main")[0].setAttribute("id","main");
-
-    //document.getElementsByName("research")[0].removeAttribute("id","hidden");
-    //document.getElementsByName("research")[0].setAttribute("id","research");
-
-    //document.getElementsByName("content")[0].removeAttribute("id","hidden");
-    //document.getElementsByName("content")[0].setAttribute("id","content");
-
-    document.getElementsByName("selected")[0].removeAttribute("id","selected");
-    document.getElementsByName("selected")[0].setAttribute("id","hidden");
-}
-*/
-/*
-function selected(event){
-    document.getElementsByName("main")[0].removeAttribute("id","main");
-    document.getElementsByName("main")[0].setAttribute("id","hidden");
-
-    //document.getElementsByName("research")[0].removeAttribute("id","research");
-    //document.getElementsByName("research")[0].setAttribute("id","hidden");
-    
-    //document.getElementsByName("content")[0].removeAttribute("id","content");
-    //document.getElementsByName("content")[0].setAttribute("id","hidden");
-
-    document.getElementsByName("selected")[0].removeAttribute("id","hidden");
-    document.getElementsByName("selected")[0].setAttribute("id","selected");
-    
-
-    test2 = event.path[2].cloneNode(true);
-
-    document.getElementsByName("id")[0].value= test2.children[2].value;
-    document.getElementsByName("pic")[0].value = test2.children[1].children[0].src;
-    document.getElementsByName("title")[0].value = test2.children[0].children[0].textContent;
-    
- 
-    document.getElementById("selected").removeChild(document.getElementById("selected").lastChild);
-    document.getElementById("selected").appendChild(
-        event.path[2].cloneNode(true)
-    );
-
-}*/
 
 function print404(){
     fetch(FOX_API).then(onResponse).then(result => {

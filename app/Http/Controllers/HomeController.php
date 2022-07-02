@@ -61,7 +61,9 @@ class HomeController extends Controller
                 
             }
             //return response()->json($res1);
-            return response()->json($json);           
+            return response()->json(["result"=>"success","data"=>$json]);           
+        }else{
+            return response()->json(["result"=>"notFound","data"=>""]);
         }
     }
 
