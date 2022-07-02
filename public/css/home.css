@@ -10,6 +10,12 @@
     justify-content: center;
 }
 
+@media(max-width:650px){
+    .post{
+        width:85%;
+    }
+}
+
 .post{
     margin: 5px 10px;
     width: 600x;
@@ -52,6 +58,13 @@
 .animePIC img{
     width:100%;
     border-radius: 2px;
+}
+
+@media(max-width:600px){
+    section{
+        display:flex;
+        flex-direction:column;
+    }
 }
 
 section{

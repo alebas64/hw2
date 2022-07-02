@@ -1,6 +1,16 @@
 /*
 risultati stampati
 */
+
+@media(max-width:1779px){
+    #content{
+        justify-content:center;
+    }
+    #search{
+        width:45%;
+    }
+}
+
 #content{
     display: flex;
     overflow: auto;

@@ -23,6 +23,14 @@
   height: 85vh;
 }
 
+@media(max-width:1250px){
+  #modal-content{
+    width:60%;
+    height:80%;
+    padding-top:30px;
+  }
+}
+
 /* The Close Button */
 #close {
   color: #aaaaaa;

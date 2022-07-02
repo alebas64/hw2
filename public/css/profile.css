@@ -29,14 +29,30 @@
     flex-direction: column;
     width: 500px;
 }
+
+@media(max-width:1250px){
+    #profile{
+        width:40%;
+    }
+}
 #hidden{
     display: none;
 }
 
-.anime{
+@media(max-width:1250px){
+    .post{
+        width:30%;
+    }
+
+    #modal-post .post{
+        width:90%;
+    }
+}
+
+.post{
     position:relative;
     margin: 5px 10px;
-    width: 340px;
+    width: 35%px;
     border:1px solid #dcdcdc;
     display:flex;
     flex-direction: column;
@@ -68,9 +84,18 @@
     font-size:xx-large;
 }
 
+@media(max-width:1250px){
+    section{
+        display:flex;
+       flex-direction:column; 
+    }
+    
+}
+
 section{
     display: flex;
-    flex-direction:row;
+    flex-direction:
+    row;
     justify-content: space-between;
     margin: 5px 5px 2px 5px;
 }
@@ -193,6 +218,34 @@ input{
 #research{
     margin-bottom:70px;
 }
+@media(max-width:1250px){
+    #main{
+        margin: 70px auto 0px auto;
+        width: 95%;
+        justify-content:space-around;
+    }
+    
+    #main form{
+        width:30%;
+    }
+
+    .fox{
+        margin: 5px 10px;
+        width: 500px;
+        border:1px solid #dcdcdc;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .imageFOX img{
+        display:flex;
+        margin: 5px auto 20px auto;
+        max-width: 450px;
+        max-height: 900px;
+        justify-content: center;
+    }
+}
 
 #main{
     margin: 70px auto 0px auto;
@@ -244,10 +297,8 @@ input{
 }
 
 .error{
-    color:
-    red;
-    display:
-    block;
+    color:red;
+    display:block;
     height: 15px;
     margin: 0px auto 3px auto;
 }
